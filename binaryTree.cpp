@@ -47,5 +47,11 @@ class BinaryTree
        Node *currentNode = nullptr;
         search(x, parent, currentNode);
  
+        // step 5 if parentis null
+
+        if (parent == nullptr)
+        {
+        
+        }
     }
 };
