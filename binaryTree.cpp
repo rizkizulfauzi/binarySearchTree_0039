@@ -51,7 +51,8 @@ class BinaryTree
 
         if (parent == nullptr)
         {
-        
+        //5a :mark the newNode as ROOT
+            ROOT = newNode;
         }
     }
 };
