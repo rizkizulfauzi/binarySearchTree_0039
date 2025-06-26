@@ -77,4 +77,20 @@ class BinaryTree
             return;
         }
     }
+
+    void search()
+    {
+        // this function the searches the current node of the specified node as
+        currentNode = ROOT;
+        parent = nullptr;
+        while((currentNode != nullptr) && (currentNode->info != element))
+        {
+            parent = currentNode;
+            if(element < currentNode->info)
+                currentNode = currentNode->leftchild;
+            else
+                currentNode = currentNode->rightchild;
+        }
+    }
+
 };
