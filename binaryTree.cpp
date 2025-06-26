@@ -78,7 +78,7 @@ class BinaryTree
         }
     }
 
-    void search()
+    void search(int element, Node *&parent,Node *&currentNode)
     {
         // this function the searches the current node of the specified node as
         currentNode = ROOT;
@@ -91,6 +91,21 @@ class BinaryTree
             else
                 currentNode = currentNode->rightchild;
         }
+    }
+
+       void inorder(Node *ptr)
+    {
+        if(isEmpty())
+        {
+            cout << "tree is empty" << endl;
+            return;
+        }
+        if(ptr == nullptr)
+            return;
+
+        inorder(ptr->leftchild);
+        cout << ptr->info << " "; //parent
+        inorder(ptr->rightchild);
     }
 
 };
