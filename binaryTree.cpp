@@ -25,6 +25,11 @@ class BinaryTree
         ROOT = nullptr; //instalasi ROOT to null
     }
 
+    bool isEmpty()
+    {
+        return ROOT == nullptr;
+    }
+
     void insert()
     {
         int x;
@@ -107,5 +112,22 @@ class BinaryTree
         cout << ptr->info << " "; //parent
         inorder(ptr->rightchild);
     }
+
+        void preorder(Node *ptr)
+    {
+        if(isEmpty())
+        {
+            cout << "tree is empty" << endl;
+            return;
+        }
+
+        if(ptr == nullptr)
+            return;
+        
+        cout << ptr->info << " ";
+        preorder(ptr->leftchild);
+        preorder(ptr->rightchild);
+    }
+
 
 };
