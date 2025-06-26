@@ -14,3 +14,13 @@ Node(){
     rightchild = nullptr; // instalalie right child to null
 }
 };
+
+class BinaryTree
+{
+    public:
+    Node * ROOT;
+    BinaryTree()
+    {
+        ROOT = nullptr; //instalasi ROOT to null
+    }
+};
